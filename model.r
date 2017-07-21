@@ -37,7 +37,7 @@ RunModel <- function() {
 }
 
 DrawGraph <- function() {
-  plot(D$t, D$S, col="blue", type="l", ylim=c(0,1), xlim=range(D$t), ylab="population density", xlab="time")
+  plot(D$t, D$S, col="blue", type="l", ylim=c(0,1), xlim=range(D$t), ylab="population density", xlab="time",cex=1.75)
   lines(D$t, D$I, col="red", type="l")
   lines(D$t, D$R, col="black", type="l") 
 }
