@@ -39,6 +39,7 @@ RunModel <- function() {
 DrawGraph <- function() {
   plot(D$t, D$S, col="blue", type="l", ylim=c(0,1), xlim=range(D$t), ylab="population density", xlab="run time",cex.lab=1.75)
   lines(D$t, D$I, col="red", type="l")
-  lines(D$t, D$R, col="black", type="l") 
+  lines(D$t, D$R, col="black", type="l")
+  if (D$vacc>0) rect(0,max(D$t),1-D$vacc,1,col="#ccccff",lty="blank")
 }
 
